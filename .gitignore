@@ -1,0 +1,8 @@
+# Ignore OS output
+.DS_Store*
+Thumbs.db
+
+#Ignore PHP composer build
+/vendor
+/bin
+composer.lock

@@ -1,7 +1,8 @@
 {
   "require": {
     "drupal/drupal-extension": "*",
-    "phpunit/phpunit": "*"
+    "phpunit/phpunit": "*",
+    "drush/drush": "*"
   },
   "minimum-stability": "dev",
   "config": {

@@ -5,6 +5,10 @@ default:
     Behat\MinkExtension\Extension:
       goutte: ~
       selenium2: ~
-      base_url: http://git6site.devdrupal.org/
+      # The base URL of the app you're testing
+      base_url: http://dereks-macbook-pro.local/~derekmcburney/drupal7/drupal-7.17
     Drupal\DrupalExtension\Extension:
       blackbox: ~
+      api_driver: "drupal"
+      drupal:
+        drupal_root: /Users/derekmcburney/Sites/drupal7/drupal

@@ -1,5 +1,6 @@
 # Ignore environment-specific configuration
 config.sh
+aliases.drushrc.php
 
 # Ignore OS output
 .DS_Store*

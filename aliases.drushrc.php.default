@@ -1,0 +1,45 @@
+<?php
+$aliases['local'] = array(
+	'remote-host' => '',
+	'remote-user' => '',
+	'root' => ''
+);
+
+$aliases['local.site'] = array(
+	'parent' => '@prod',
+	'uri' => ''
+);
+
+$aliases['dev'] = array(
+	'remote-host' => '',
+	'remote-user' => '',
+	'root' => ''
+);
+
+$aliases['dev.site'] = array(
+	'parent' => '@prod',
+	'uri' => ''
+);
+
+$aliases['test'] = array(
+	'remote-host' => '',
+	'remote-user' => '',
+	'root' => ''
+);
+
+$aliases['test.site'] = array(
+	'parent' => '@prod',
+	'uri' => ''
+);
+
+$aliases['prod'] = array(
+	'remote-host' => '',
+	'remote-user' => '',
+	'root' => ''
+);
+
+$aliases['prod.site'] = array(
+	'parent' => '@prod',
+	'uri' => ''
+);
+?>

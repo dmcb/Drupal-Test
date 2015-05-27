@@ -42,6 +42,8 @@
 		mkdir ~/.drush
 		cp aliases.drushrc.php.default ~/.drush/alises.drushrc.php
 
+4. [Ensure this application can SSH to remote-user on remote-host without a password](http://www.rebol.com/docs/ssh-auto-login.html)
+
 ## Usage
 
 * Run scripts

@@ -14,4 +14,4 @@ default:
     Drupal\DrupalExtension:
       blackbox: ~
       region_map:
-        Body: '#content'
+        Body: '#uc-content > .primary'

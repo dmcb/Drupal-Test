@@ -1,14 +1,16 @@
 default:
-  paths:
-    features: 'features'
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - Drupal\DrupalExtension\Context\DrushContext
   extensions:
-    Behat\MinkExtension\Extension:
+    Behat\MinkExtension:
       goutte: ~
       selenium2: ~
-      # The base URL of the app you're testing
-      base_url: http://dereks-macbook-pro.local/~derekmcburney/drupal7/drupal-7.17
-    Drupal\DrupalExtension\Extension:
+    Drupal\DrupalExtension:
       blackbox: ~
       api_driver: "drupal"
-      drupal:
-        drupal_root: /Users/derekmcburney/Sites/drupal7/drupal

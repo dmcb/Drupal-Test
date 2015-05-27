@@ -1,10 +1,7 @@
 {
   "require": {
-    "drupal/drupal-extension": "*",
-    "phpunit/phpunit": "*",
-    "drush/drush": "*"
+    "drupal/drupal-extension": "~3.0"
   },
-  "minimum-stability": "dev",
   "config": {
     "bin-dir": "bin/"
   }

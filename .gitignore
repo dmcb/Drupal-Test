@@ -1,3 +1,6 @@
+# Ignore environment-specific configuration
+config.sh
+
 # Ignore OS output
 .DS_Store*
 Thumbs.db

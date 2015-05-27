@@ -14,3 +14,5 @@ default:
     Drupal\DrupalExtension:
       blackbox: ~
       api_driver: "drupal"
+      region_map:
+        Body: '#content'

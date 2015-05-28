@@ -7,9 +7,19 @@ Scenario: Local log in
 	Then I should see "edit" in the "Body" region
 
 @api
-Scenario: CAS log in
+Scenario: Good CAS log in
 	Given I am on "/user"
 	When I press "edit-submit"
 	And I fill in "username" and "password" with CAS credentials
-	And I press "signinbutton"
-	Then I should see "edit" in the "Body" region
+	And I press "Sign In"
+	And I click "here"
+	Then I should see "Logged in via UofC Access" in the "Body" region
+
+@api
+Scenario: Bad CAS log in
+	Given I am on "/user"
+	When I press "edit-submit"
+	And I fill in "username" and "password" with CAS credentials
+	And I fill in "password" with "thisisnotthecorrectpassword"
+	And I press "Sign In"
+	Then I should see "Sorry, you entered an invalid EID or password"

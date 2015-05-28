@@ -1,6 +1,7 @@
 # Ignore environment-specific configuration
-config.sh
 aliases.drushrc.php
+config.sh
+casaccount.yml
 
 # Ignore OS output
 .DS_Store*

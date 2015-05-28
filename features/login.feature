@@ -9,5 +9,7 @@ Scenario: Local log in
 @api
 Scenario: CAS log in
 	Given I am on "/user"
-	When I log in via CAS
+	When I press "edit-submit"
+	And I fill in "username" and "password" with CAS credentials
+	And I press "signinbutton"
 	Then I should see "edit" in the "Body" region

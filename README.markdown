@@ -35,14 +35,23 @@
 
 2. Configure variables in config.sh
 
-		export BEHAT_PARAMS='{"extensions":{"Behat\\MinkExtension":{"base_url":""},"Drupal\\DrupalExtension":{"drush":{"alias":""}}}}'
+		export BEHAT_PARAMS='{"extensions":{"Behat\\MinkExtension":{"base_url":"BASE_URL"},"Drupal\\DrupalExtension":{"drush":{"alias":"ALIAS"}}}}'
 
-3. Configure aliases in aliases.drushrc.php and allow Drush to use it
+3. Copy casaccount.yml.default to casaccount.yml
+
+		cp casaccount.yml.default casaccount.yml
+
+4. Configure CAS user in casaccount.yml
+
+		username: USERNAME
+		password: PASSWORD
+
+5. Configure aliases in aliases.drushrc.php and allow Drush to use it
 
 		mkdir ~/.drush
 		cp aliases.drushrc.php.default ~/.drush/alises.drushrc.php
 
-4. [Ensure this application can SSH to remote-user on remote-host without a password](http://www.rebol.com/docs/ssh-auto-login.html)
+6. [Ensure this application can SSH to remote-user on remote-host without a password](http://www.rebol.com/docs/ssh-auto-login.html)
 
 ## Usage
 

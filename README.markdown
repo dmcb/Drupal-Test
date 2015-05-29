@@ -41,7 +41,7 @@
 
 		cp casaccount.yml.default casaccount.yml
 
-4. Configure CAS user in casaccount.yml
+4. Configure a valid CAS user in casaccount.yml
 
 		username: USERNAME
 		password: PASSWORD
@@ -49,9 +49,9 @@
 5. Configure aliases in aliases.drushrc.php and allow Drush to use it
 
 		mkdir ~/.drush
-		cp aliases.drushrc.php.default ~/.drush/alises.drushrc.php
+		cp aliases.drushrc.php.default ~/.drush/aliases.drushrc.php
 
-6. [Ensure this application can SSH to remote-user on remote-host without a password](http://www.rebol.com/docs/ssh-auto-login.html)
+6. Ensure this application can SSH to the remote-user on remote-host as defined in the aliases.drushrc.php file, [without a password](http://www.rebol.com/docs/ssh-auto-login.html)
 
 ## Usage
 

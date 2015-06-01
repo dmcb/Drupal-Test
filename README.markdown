@@ -4,58 +4,40 @@
 
 ## Dependencies
 
-* [Composer](https://getcomposer.org)
-* [Drush](http://www.drush.org/en/master/)
-* PHP 5.35+
+* [Docker](https://www.docker.com)
+* [Git](http://www.git-scm.com)
 
-## Installation (OS X instructions)
+## Installation
 
-* Brew
-	
-		ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+* [Docker](https://docs.docker.com/installation/#installation)
+* [Git](http://git-scm.com/downloads)	
+* This library
 
-* Drush
+		git clone https://github.com/dmcb/drupal-test.git
 
-		brew install drush
-
-* Composer
-
-		brew install composer
-		
-* App dependencies
-
-		composer install
 
 ## Configure
 
-1. Copy config.sh.default to config.sh
-
-		cp config.sh.default config.sh
-		chmod 755 config.sh
-
-2. Configure variables in config.sh
-
-		export BEHAT_PARAMS='{"extensions":{"Behat\\MinkExtension":{"base_url":"BASE_URL"},"Drupal\\DrupalExtension":{"drush":{"alias":"ALIAS"}}}}'
-
-3. Copy casaccount.yml.default to casaccount.yml
+1. In /drupal-test, copy default CAS account file to a configurable file
 
 		cp casaccount.yml.default casaccount.yml
 
-4. Configure a valid CAS user in casaccount.yml
+2. Configure a valid CAS user in casaccount.yml
 
 		username: USERNAME
 		password: PASSWORD
 
-5. Configure aliases in aliases.drushrc.php and allow Drush to use it
+3. Configure aliases in aliases.drushrc.php
 
-		mkdir ~/.drush
-		cp aliases.drushrc.php.default ~/.drush/aliases.drushrc.php
+4. Build the docker container
 
-6. Ensure this application can SSH to the remote-user on remote-host as defined in the aliases.drushrc.php file, [without a password](http://www.rebol.com/docs/ssh-auto-login.html)
+		sudo docker build -t drupal-test .
+
+5. Ensure this application can SSH to the remote-user on remote-host as defined in the aliases.drushrc.php file, [without a password](http://www.rebol.com/docs/ssh-auto-login.html)
+
 
 ## Usage
 
-* Run scripts
+* Run drupal-test
 
-		. ./config.sh
-		bin/behat
+		sudo docker run drupal-test

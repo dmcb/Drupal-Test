@@ -1,1 +1,0 @@
-export BEHAT_PARAMS='{"extensions":{"Behat\\MinkExtension":{"base_url":""},"Drupal\\DrupalExtension":{"drush":{"alias":""}}}}'

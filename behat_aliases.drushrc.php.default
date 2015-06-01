@@ -1,0 +1,8 @@
+<?php
+$aliases['behat'] = array(
+    'remote-host' => '$REMOTE_HOST',
+    'remote-user' => '$REMOTE_USER',
+    'root' => '$ROOT',
+    'uri' => '$URI'
+);
+?>

@@ -13,5 +13,7 @@ default:
       selenium2: ~
     Drupal\DrupalExtension:
       blackbox: ~
+      drush:
+        alias: behat
       region_map:
         Body: '#uc-content > .primary'

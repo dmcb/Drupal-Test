@@ -31,7 +31,7 @@
 
 		sudo docker build -t drupal-test .
 
-4. Ensure this application can SSH to the remote-user on remote-host as defined in the aliases.drushrc.php file, [without a password](http://www.rebol.com/docs/ssh-auto-login.html)
+4. Ensure this application can SSH to the remote-user on remote-host as defined in the aliases.drushrc.php file, [without a password](http://www.rebol.com/docs/ssh-auto-login.html). The final output Docker produces in Step 3 is a generated RSA.pub you can copy and save on the remote server to complete this step.
 
 
 ## Usage

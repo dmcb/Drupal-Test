@@ -29,3 +29,7 @@ RUN php composer.phar install
 # Define the entry point
 RUN chmod 755 $APP_PATH/run.sh
 ENTRYPOINT $APP_PATH/run.sh
+
+# Serve up RSA for adding SSH
+RUN echo -e  'y\n'|ssh-keygen -q -t rsa -N "" -f ~/.ssh/id_rsa
+RUN cat  ~/.ssh/id_rsa.pub

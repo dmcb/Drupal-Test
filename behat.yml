@@ -9,7 +9,12 @@ default:
         - Drupal\DrupalExtension\Context\DrushContext
   extensions:
     Behat\MinkExtension:
-      goutte: ~
+      goutte:
+        guzzle_parameters:
+          config:
+            curl:
+              64: false   # CURLOPT_SSL_VERIFYPEER
+              172: false  # CURLOPT_CERTINFO
       selenium2: ~
     Drupal\DrupalExtension:
       blackbox: ~

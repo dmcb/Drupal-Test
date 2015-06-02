@@ -27,17 +27,19 @@
 		username: USERNAME
 		password: PASSWORD
 
-3. Configure aliases in aliases.drushrc.php
-
-4. Build the docker container
+3. Build the docker container
 
 		sudo docker build -t drupal-test .
 
-5. Ensure this application can SSH to the remote-user on remote-host as defined in the aliases.drushrc.php file, [without a password](http://www.rebol.com/docs/ssh-auto-login.html)
+4. Ensure this application can SSH to the remote-user on remote-host as defined in the aliases.drushrc.php file, [without a password](http://www.rebol.com/docs/ssh-auto-login.html)
 
 
 ## Usage
 
 * Run drupal-test
 
-		sudo docker run drupal-test
+		sudo docker run drupal-test [base_url] [remote_host] [remote_user] [root] [uri]
+
+* Example
+
+		sudo docker run drupal-test http://www.hotelalma.ca wcmweb1.ucalgary.ca wcm /d7/current hotelalma

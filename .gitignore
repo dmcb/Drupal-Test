@@ -1,6 +1,5 @@
 # Ignore environment-specific configuration
-aliases.drushrc.php
-config.sh
+behat_aliases.drushrc.php
 casaccount.yml
 
 # Ignore OS output

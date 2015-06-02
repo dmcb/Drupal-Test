@@ -6,6 +6,7 @@ MAINTAINER Derek McBurney
 # Install OS dependencies
 RUN apt-get update
 RUN apt-get install -y curl
+RUN apt-get install -y git
 RUN apt-get install -y php5
 RUN apt-get install -y php5-curl
 RUN apt-get install -y php-pear
@@ -26,4 +27,5 @@ RUN curl -s http://getcomposer.org/installer | php
 RUN php composer.phar install
 
 # Define the entry point
-ENTRYPOINT run.sh
+RUN chmod 755 $APP_PATH/run.sh
+ENTRYPOINT $APP_PATH/run.sh

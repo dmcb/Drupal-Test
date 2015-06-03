@@ -13,7 +13,7 @@ Scenario: Good CAS log in
 	And I fill in "username" and "password" with CAS credentials
 	And I press "Sign In"
 	And I click "here"
-	Then I should see "Logged in via UofC Access" in the "Body" region
+	Then I should see "Logged in via UofC Access"
 
 @api
 Scenario: Bad CAS log in

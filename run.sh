@@ -9,14 +9,14 @@ fi
 BASE_URL="$1"
 REMOTE_HOST="$2"
 REMOTE_USER="$3"
-DRUPAL_ROOT="$4"
+ROOT="$4"
 URI="$5"
 
 export BEHAT_PARAMS="{\"extensions\":{\"Behat\\\\MinkExtension\":{\"base_url\":\"$BASE_URL\"}}}"
 cp behat_aliases.drushrc.php.default behat_aliases.drushrc.php
 sed -i "s!\$REMOTE_HOST!$REMOTE_HOST!" behat_aliases.drushrc.php
 sed -i "s!\$REMOTE_USER!$REMOTE_USER!" behat_aliases.drushrc.php
-sed -i "s!\$DRUPAL_ROOT!$DRUPAL_ROOT!" behat_aliases.drushrc.php
+sed -i "s!\$ROOT!$ROOT!" behat_aliases.drushrc.php
 sed -i "s!\$URI!$URI!" behat_aliases.drushrc.php
 cp behat_aliases.drushrc.php ~/.drush/behat_aliases.drushrc.php
 

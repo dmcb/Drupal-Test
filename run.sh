@@ -2,7 +2,7 @@
 
 if [ $# -ne 5 ]; then
 	echo "Usage: ./"`basename $0`" base_url remote_host remote_user root uri"
-	echo "e.g. ./"`basename $0`" http://www.hotelalma.ca wcmweb1.ucalgary.ca wcm /d7/current hotelalma"
+	echo "e.g. ./"`basename $0`" http://www.hotelalma.ca wcmdev.ucalgary.ca wcm /d7/current hotelalma"
 	exit 1
 fi
 

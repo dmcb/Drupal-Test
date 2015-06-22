@@ -4,10 +4,34 @@
 
 ## Dependencies
 
+* [Composer](https://getcomposer.org)
+* [Drush](http://www.drush.org/en/master/)
 * [Docker](https://www.docker.com)
 * [Git](http://www.git-scm.com)
+* PHP 5.35+
+
 
 ## Installation
+
+### OS X
+
+* Brew
+	
+		ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+
+* Drush
+
+		brew install drush
+
+* Composer
+
+		brew install composer
+		
+* App dependencies
+
+		composer install
+		
+### Docker
 
 * [Docker](https://docs.docker.com/installation/#installation)
 * [Git](http://git-scm.com/downloads)	
@@ -26,6 +50,15 @@
 
 		username: USERNAME
 		password: PASSWORD
+		
+### Non-docker steps
+
+3. Enable the run script
+
+		chmod 755 run.sh
+	
+		
+### Docker steps
 
 3. Build the docker container
 
@@ -38,8 +71,8 @@
 
 * Run drupal-test
 
-		sudo docker run drupal-test [base_url] [remote_host] [remote_user] [root] [uri]
+		run.sh drupal-test [base_url] [remote_host] [remote_user] [root] [uri]
 
 * Example
 
-		sudo docker run drupal-test http://www.hotelalma.ca wcmweb1.ucalgary.ca wcm /d7/current hotelalma
+		run.sh drupal-test http://www.hotelalma.ca wcmweb1.ucalgary.ca wcm /d7/current hotelalma

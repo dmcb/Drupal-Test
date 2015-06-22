@@ -51,13 +51,6 @@
 		username: USERNAME
 		password: PASSWORD
 		
-### Non-docker steps
-
-3. Enable the run script
-
-		chmod 755 run.sh
-	
-		
 ### Docker steps
 
 3. Build the docker container

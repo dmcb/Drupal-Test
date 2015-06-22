@@ -18,6 +18,7 @@ sed -i "s!\$REMOTE_HOST!$REMOTE_HOST!" behat.aliases.drushrc.php
 sed -i "s!\$REMOTE_USER!$REMOTE_USER!" behat.aliases.drushrc.php
 sed -i "s!\$ROOT!$ROOT!" behat.aliases.drushrc.php
 sed -i "s!\$URI!$URI!" behat.aliases.drushrc.php
+mkdir -p ~/.drush
 cp behat.aliases.drushrc.php ~/.drush/behat.aliases.drushrc.php
 
 bin/behat
